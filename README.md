@@ -3,7 +3,7 @@
 The original script was created by Double0negative. All I did was turn it into a Discord Bot.
 The web page is still there, because its awesome!
 
-![CSGODiscordLogo](http://mdavison.net/start/web/images/CSGODiscord.png)
+![CSGODiscordLogo](http://mdavison.net/start/web/images/CSGODiscordBot.png)
 
 # Install 
 
