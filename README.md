@@ -3,6 +3,9 @@
 The original script was created by Double0negative. All I did was turn it into a Discord Bot.
 The web page is still there, because its awesome!
 
+![CSGODiscordLogo](http://mdavison.net/start/web/images/CSGODiscord.png)
+Format: ![Alt Text](http://mdavison.net/start/)
+
 # Install 
 
 * If you have GIT, you can use `git clone https://github.com/MickyDNet/CSGO-HUD-Discord.git` to download the project. Otherwise, Click the Download Zip button above
