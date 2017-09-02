@@ -6,10 +6,9 @@
 	var scoreCounted = 0;
 	let nmsg;
 	
-	const token = '<DISCORD BOT TOKEN>';
+	const token = 'MzUxNzMzNDI3NjQyMzAyNDY2.DIW4yw.LZhkxSluUs5tE62J5zAZAYSkevI';
 	
 	dclient.on('ready', () => {
-		dclient.user.setStatus('invisible')
 		var tochannel = dclient.channels.find('name','csgospam');
 			tochannel.send('Online!');
 	});
@@ -18,7 +17,7 @@
     http = require('http');
     fs = require('fs');
 
-    var version = "1.0.4";
+    var version = "1.0.6";
     var csgoport = 3000;
     var webport = 30120; //2626
 
@@ -68,7 +67,7 @@
                 body += data;
             });
             req.on('end', function() {
-                console.log("POST payload: " + body);
+                //console.log("POST payload: " + body);
                 update(JSON.parse(body));
                 res.end('');
             });
@@ -116,21 +115,21 @@
 				let messagecount = parseInt('4');
 				if (scoreCounted === 0) {
 					var tochannel = dclient.channels.find('name','csgospam');
-					tochannel.fetchMessages({ limit: 5 }).then(messages => tochannel.bulkDelete(messages.filter(m => m.author.id === dclient.user.id)));
+					tochannel.fetchMessages({ limit: 100 }).then(messages => tochannel.bulkDelete(messages.filter(m => m.author.id === dclient.user.id)));
 					const embed = {
 					  "title": "Round over",
 					  "color": 16381126,
 					  "footer": {
-						"icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+						"icon_url": "http://topscheats.ru/templates/Green/images/logo.png",
 						"text": "CS:GO Discord - By MickyDNet"
 					  },
 					  "thumbnail": {
-						"url": "https://cdn.discordapp.com/embed/avatars/0.png"
+						"url": "https://worldgaming.com/events/images/csgo/csgo-logo.png"
 					  },
 					  "author": {
 						"name": "CS:GO Discord",
-						"url": "https://discordapp.com",
-						"icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+						"url": "https://github.com/MickyDNet/CSGO-HUD-Discord",
+						"icon_url": "http://topscheats.ru/templates/Green/images/logo.png"
 					  },
 					  "fields": [
 
@@ -148,7 +147,7 @@
 					};
 					tochannel.send({ embed });
 					tochannel.send("Round over - CT: " + json.map.team_ct.score + " - T:" + json.map.team_t.score, {tts: true})
-					tochannel.fetchMessages({ limit: 1 }).then(messages => tochannel.bulkDelete(messages.filter(m => m.author.id === dclient.user.id)));
+					//tochannel.fetchMessages({ limit: 1 }).then(messages => tochannel.bulkDelete(messages.filter(m => m.author.id === dclient.user.id)));
 					scoreCounted = 1;
 				}
             } else {
