@@ -6,7 +6,7 @@
 	var scoreCounted = 0;
 	let nmsg;
 	
-	const token = 'MzUxNzMzNDI3NjQyMzAyNDY2.DIW4yw.LZhkxSluUs5tE62J5zAZAYSkevI';
+	const token = '<BOT TOKEN HERE>';
 	
 	dclient.on('ready', () => {
 		var tochannel = dclient.channels.find('name','csgospam');
