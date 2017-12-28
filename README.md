@@ -20,5 +20,5 @@ The web page is still there, because its awesome!
 * Create a Discord Bot at https://discordapp.com/developers/applications/me and copy the bot token into server.js`
 * Inside of server.js, do a find and replace on 'csgospam' with your channel name in discord.
 
-
-
+# Need any help?
+Join my `empty` Discord ;) https://discord.gg/wkdmu4g
